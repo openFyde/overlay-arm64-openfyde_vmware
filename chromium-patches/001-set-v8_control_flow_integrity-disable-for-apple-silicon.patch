@@ -1,0 +1,18 @@
+Index: src/v8/BUILD.gn
+===================================================================
+--- src.orig/v8/BUILD.gn
++++ src/v8/BUILD.gn
+@@ -303,9 +303,10 @@ declare_args() {
+   # Enable control-flow integrity features, such as pointer authentication for
+   # ARM64. Enable it by default for simulator builds and when native code
+   # supports it as well.
+-  v8_control_flow_integrity =
+-      v8_current_cpu == "arm64" &&
+-      (target_is_simulator || arm_control_flow_integrity != "none")
++#  v8_control_flow_integrity =
++#      v8_current_cpu == "arm64" &&
++#      (target_is_simulator || arm_control_flow_integrity != "none")
++  v8_control_flow_integrity = false
+ 
+   # A temporary flag for development of the WasmCodePointerTable.
+   v8_enable_wasm_code_pointer_table = false

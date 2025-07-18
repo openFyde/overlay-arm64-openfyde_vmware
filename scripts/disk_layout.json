@@ -1,0 +1,72 @@
+{
+  "_comment": "See http://www.chromium.org/chromium-os/building-chromium-os/disk-layout-format",
+  "parent": "legacy_disk_layout.json",
+  "layouts":{
+    "common":[
+			{
+        # Kernel for Slot A, no file system.
+        "num": 2,
+        "label": "KERN-A",
+        "type": "kernel",
+        "size": "48 MiB"
+      },
+      {
+        # Kernel for Slot B, no file system.
+        "num": 4,
+        "label": "KERN-B",
+        "type": "kernel",
+        "size": "48 MiB"
+      },
+      {
+        # Used for Legacy Bios, and EFI Bios, not ChromeOS hardware
+        "num": 12,
+        "label": "EFI-SYSTEM",
+        "type": "efi",
+        "fs_format": "vfat",
+        "size": "128 MiB",
+        "uuid": "clear"
+      },
+      {
+        "num": 5,
+        "size": "2724 MiB"
+      },
+      {
+        "num": 3,
+        # caculate: size = fs_size / 64  + 200 (M)
+        "fs_size":"2484 MiB",
+        "size":"2724 MiB"
+      }
+    ],
+    "usb":[
+      {
+        # Slot B rootfs, unused on USB, but pad to 2M.
+        # installation will expand this to size from base.
+        "num": 5,
+        "size": "2 MiB"
+      },
+      {
+        "num": 3,
+        "fs_size":"2484 MiB",
+        "size": "2724 MiB"
+      },
+      {
+        "num": 1,
+        "size": "4096 MiB"
+      }
+    ],
+    "factory_install": [
+      {
+        "num": 3,
+        "fs_size":"2484 MiB",
+        "size":"2724 MiB"
+      }
+    ],
+    "recovery":[
+      {
+        "num": 3,
+        "fs_size":"2484 MiB",
+        "size": "2724 MiB"
+      }
+    ]
+  }
+}
