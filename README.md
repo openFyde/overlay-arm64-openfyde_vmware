@@ -28,16 +28,8 @@ This repository contains the following packages:
 | kconfig 		      | kernelconfig  		|           |
 <br>
 
-## About the board `amd64-openfyde_vmware`
+## About the board `armd64-openfyde_vmware`
  - This board is a openFyde version for vmware which is similar with [amd64-vmware](https://fydeos.com/release/15.0/amd64-vmware).
 
- - For best use experience, suggest to use it on [VMware Workstation](https://www.vmware.com/products/workstation-pro.html) for Windows.
+ - For best use experience, suggest to use it on [VMware Fusion](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion) for Mac ARM SOC.
 
-## Creating OVA files from bin image
-Use `create-ova` script to convert chromium bin image to ova files. It does the following for you:
-* Converting `chromiumos_test_image.bin` to vmdk format;
-* Resizing vmdk to 15G;
-* Creating a temp vmx file;
-* Creating ova file.
-
-Before using this script, you must configure relevant tool path in the beginning of the script.
