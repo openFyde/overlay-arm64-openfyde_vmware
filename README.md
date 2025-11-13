@@ -1,4 +1,4 @@
-# overlay-amd64-openfyde_vmware
+# overlay-arm64-openfyde_vmware
 
 ![Logo badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fopenfyde-badge-wivuxrq8xzvh.runkit.sh%2F) ![Release badge](https://img.shields.io/github/v/release/openFyde/overlay-amd64-openfyde_vmware?label=latest%20release%20image)
 
@@ -29,7 +29,7 @@ This repository contains the following packages:
 <br>
 
 ## About the board `armd64-openfyde_vmware`
- - This board is a openFyde version for vmware which is similar with [amd64-vmware](https://fydeos.com/release/15.0/amd64-vmware).
+ - This board is for the openFyde release for VMware which is similar to [amd64-vmware](https://fydeos.com/release/15.0/amd64-vmware).
 
- - For best use experience, suggest to use it on [VMware Fusion](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion) for Mac ARM SOC.
+ - For best use experience, we suggest to use it on [VMware Fusion](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion) for Mac with Apple Silicon.
 
