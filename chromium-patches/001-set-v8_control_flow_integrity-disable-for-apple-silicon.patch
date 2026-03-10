@@ -1,18 +1,18 @@
-Index: src/v8/BUILD.gn
-===================================================================
---- src.orig/v8/BUILD.gn
-+++ src/v8/BUILD.gn
-@@ -303,9 +303,10 @@ declare_args() {
-   # Enable control-flow integrity features, such as pointer authentication for
+diff --git a/v8/BUILD.gn b/v8/BUILD.gn
+index 1bb7fc93c10..ced007c5074 100644
+--- a/v8/BUILD.gn
++++ b/v8/BUILD.gn
+@@ -329,9 +329,10 @@ declare_args() {
    # ARM64. Enable it by default for simulator builds and when native code
-   # supports it as well.
--  v8_control_flow_integrity =
--      v8_current_cpu == "arm64" &&
--      (target_is_simulator || arm_control_flow_integrity != "none")
-+#  v8_control_flow_integrity =
-+#      v8_current_cpu == "arm64" &&
-+#      (target_is_simulator || arm_control_flow_integrity != "none")
+   # supports it as well. On Mac, control-flow integrity does not work so we
+   # avoid enabling it when using the simulator.
+-  v8_control_flow_integrity = v8_current_cpu == "arm64" &&
+-                              ((v8_target_is_simulator && target_os != "mac") ||
+-                               arm_control_flow_integrity != "none")
++#  v8_control_flow_integrity = v8_current_cpu == "arm64" &&
++#                              ((v8_target_is_simulator && target_os != "mac") ||
++#                               arm_control_flow_integrity != "none")
 +  v8_control_flow_integrity = false
- 
-   # A temporary flag for development of the WasmCodePointerTable.
-   v8_enable_wasm_code_pointer_table = false
+
+   # Enable heap reservation of size 4GB. Only possible for 64bit archs.
+   cppgc_enable_caged_heap =
