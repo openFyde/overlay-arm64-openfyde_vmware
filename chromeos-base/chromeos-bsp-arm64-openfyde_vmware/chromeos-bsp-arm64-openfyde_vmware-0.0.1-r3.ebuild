@@ -20,6 +20,8 @@ RDEPEND="
 	virtual/gentoo-extra-pkgs
 	dev-libs/libdnet
 	app-emulation/open-vm-tools
+  gui-apps/wl-clipboard
+  chromeos-base/ferrochrome-clipboard
 "
 
 DEPEND="${RDEPEND}
