@@ -6295,6 +6295,8 @@ CONFIG_STAGING=y
 # Android
 #
 CONFIG_ASHMEM=y
+CONFIG_ION=y
+CONFIG_ION_SYSTEM_HEAP=y
 # end of Android
 
 # CONFIG_LTE_GDM724X is not set
