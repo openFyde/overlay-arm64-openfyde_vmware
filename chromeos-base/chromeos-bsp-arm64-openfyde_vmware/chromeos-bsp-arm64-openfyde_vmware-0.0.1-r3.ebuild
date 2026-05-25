@@ -22,6 +22,7 @@ RDEPEND="
 	app-emulation/open-vm-tools
   gui-apps/wl-clipboard
   chromeos-base/ferrochrome-clipboard
+  chromeos-base/auto-expand-partition
 "
 
 DEPEND="${RDEPEND}
