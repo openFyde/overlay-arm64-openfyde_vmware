@@ -20,6 +20,7 @@ RDEPEND="
 	virtual/gentoo-extra-pkgs
 	dev-libs/libdnet
 	app-emulation/open-vm-tools
+	app-emulation/spice-vdagent
   gui-apps/wl-clipboard
   chromeos-base/ferrochrome-clipboard
   chromeos-base/auto-expand-partition
