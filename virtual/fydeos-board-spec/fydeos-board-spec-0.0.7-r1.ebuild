@@ -9,9 +9,11 @@ HOMEPAGE="http://fydeos.com"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="*"
+IUSE="notialis_host"
 
 RDEPEND="
   chromeos-base/chromeos-bsp-arm64-openfyde_vmware
+  notialis_host? ( virtual/notialis )
 "
 
 DEPEND="${RDEPEND}"
